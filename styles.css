@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', 'Inter',sans-serif;   
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.card{
+    max-width:800px;
+    display:flex;
+    background:hsl(244, 38%, 16%);
+    border-radius:5px;
+    overflow: hidden;
+    /* max-height: 60vh; */
+}
+ .card .first{
+    width:50%;  
+    padding:40px;
+}
+.card .first h4{
+    font-size:1.2rem;
+    color:white;
+}
+.first .para {
+    margin:40px 0;
+    font-size:0.7rem;
+    color:hsla(0, 0%, 100%, 0.6);
+
+}
+.card .stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    text-transform: uppercase;
+}
+.each .value{
+    color:white;
+    font-size:0.9rem;
+}
+
+.each p{
+    margin:2px 0;
+    font-size:0.8rem;
+    color:hsla(0, 0%, 100%, 0.6);
+}
+.second{
+    width:50%;
+    overflow: hidden;
+    position:relative;
+}
+.second img{
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+}
+.second::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:hsla(277, 64%, 61%,0.3);
+}
+@media screen  and (max-width:545px)
+{
+    .card{
+        flex-direction: column-reverse;
+    }
+     .card .second{
+        width:100%;
+    }
+    .card .first{
+        width:100%;
+        padding:0;
+        /* background-color: red; */
+    }
+}
+@media screen and (max-width:787px)
+{
+    .card .first{
+        padding:30px;
+    }
+    .each p{
+        font-size:0.6rem;
+    }
+}
+@media screen and (max-width:800px) {
+    .card{
+        max-width: 90%;
+        margin:0 auto;
+    }
+    
+}
